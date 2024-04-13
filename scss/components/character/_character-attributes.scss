@@ -1,0 +1,49 @@
+.character-attributes {
+  .attribute {
+    display: flex;
+    flex-direction: column;
+    place-content: center flex-start;
+    align-items: center;
+
+    padding: 8px;
+    mask-image: url("../assets/ui/tables/table-header1.webp");
+    mask-size: 100% 100%;
+    background-color: black;
+    color: white;
+
+    .label {
+      text-align: center;
+    }
+
+    .value-row {
+      display: flex;
+      flex-direction: row;
+      place-content: center flex-start;
+      align-items: flex-end;
+      gap: 4px;
+
+      .value {
+        font-size: 36px;
+        line-height: 30px;
+      }
+
+      .bonus-damage {
+        display: flex;
+        flex-direction: row;
+        place-content: center flex-start;
+        align-items: flex-end;
+        gap: 4px;
+
+        color: $c-gray-medium;
+
+        .challenge-die {
+          $die-size: 20px;
+
+          width: $die-size;
+          height: $die-size;
+          background-color: $c-gray-medium;
+        }
+      }
+    }
+  }
+}

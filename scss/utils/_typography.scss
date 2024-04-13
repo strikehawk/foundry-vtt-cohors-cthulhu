@@ -1,0 +1,31 @@
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+$font-dominican: "DominicanSmallCaps" !default;
+$font-path: "../fonts" !default;
+
+@font-face {
+  font-family: "#{$font-dominican}";
+  src: url("#{$font-path}/#{$font-dominican}.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@mixin cc-title {
+  font-family: "#{$font-dominican}";
+}
+
+@mixin cc-subtitle {
+  font-family: "#{$font-dominican}";
+  font-size: small;
+  font-weight: bold;
+}
+
+.cc-title {
+  @include cc-title;
+}
+
+.cc-subtitle {
+  @include cc-subtitle;
+}

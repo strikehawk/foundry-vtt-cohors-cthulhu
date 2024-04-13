@@ -1,0 +1,48 @@
+<header class="sheet-header">
+    <div fxLayout="row" fxLayoutAlign="start bottom">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="8px" fxFlex>
+            {{!-- first data row --}}
+            <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
+                <div class="fieldset hand-drawn-borders" fxFlex>
+                    <span class="cell-header bg-gray-dark cc-subtitle">Name</span>
+                    <span class="content cc-title">Tiberius Gaius Rodus</span>
+                </div>
+
+                <div class="fieldset hand-drawn-borders">
+                    <span class="cell-header bg-gray-dark cc-subtitle">Culture</span>
+                    <span class="content cc-title">Roman Citizen</span>
+                </div>
+
+                <div class="fieldset hand-drawn-borders">
+                    <span class="cell-header bg-gray-dark cc-subtitle">Caste</span>
+                    <span class="content cc-title">Plebian / Freedman</span>
+                </div>
+
+                <div class="fieldset fixed hand-drawn-borders">
+                    <span class="cell-header bg-gray-dark cc-subtitle">Wealth</span>
+                    <span class="content cc-title">2</span>
+                </div>
+            </div>
+
+            {{!-- second data row --}}
+            <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
+                <div class="fieldset hand-drawn-borders" fxFlex>
+                    <span class="cell-header bg-gray-dark cc-subtitle">Archetype</span>
+                    <span class="content cc-title">Soldier / Legionary</span>
+                </div>
+
+                <div class="fieldset hand-drawn-borders" fxFlex>
+                    <span class="cell-header bg-gray-dark cc-subtitle">Background</span>
+                    <span class="content cc-title">Campaign Veteran</span>
+                </div>
+
+                <div class="fieldset hand-drawn-borders" fxFlex>
+                    <span class="cell-header bg-gray-dark cc-subtitle">Characteristic</span>
+                    <span class="content cc-title">Atlantean Ancestry</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

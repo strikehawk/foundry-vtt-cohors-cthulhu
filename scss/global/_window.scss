@@ -1,0 +1,27 @@
+.window-app {
+  font-family: $font-primary;
+}
+
+.font-primary {
+  font-family: $font-primary;
+}
+
+.pad-2 {
+  padding: 2px;
+}
+.pad-5 {
+  padding: 5px;
+}
+
+.font-size-11 {
+  font-size: 11px;
+}
+
+.rollable {
+  &:hover,
+  &:focus {
+    color: #000;
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+  }
+}

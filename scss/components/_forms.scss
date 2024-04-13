@@ -1,0 +1,134 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+
+  .profile-img {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 10px;
+    // border: none;
+  }
+
+  // .header-fields {
+  //   flex: 1;
+  // }
+
+  h1.charname {
+    height: 50px;
+    padding: 0px;
+    border-bottom: 0;
+
+    input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  h2.tag {
+    height: 30px;
+    padding: 0px;
+    border-bottom: 0;
+
+    input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  .right-side {
+    padding: 0 0 0 30px;
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+  font-size: 18px;
+  font-family: $font-dominican;
+  text-transform: uppercase;
+}
+
+.fallout.sheet .window-content form {
+  height: 100%;
+  overflow: hidden;
+}
+
+.fallout.sheet .window-content .tab {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.fallout.sheet .editor {
+  height: 100%;
+}
+.fallout.sheet .editor .editor-content {
+  height: 100%;
+}
+
+.description-field {
+  background: rgba(245, 245, 220, 0.301);
+  padding: 0 5px;
+  border: 1px solid lightgray;
+  .editor {
+    height: 100%;
+  }
+}
+
+//* .editor,
+.editor .editor-content {
+  min-height: 200px;
+}
+
+.box {
+  padding: 0 5px 5px 5px;
+  margin-bottom: 15px;
+  background-color: #e5e8ea1f;
+  //background-color: $c-font-prim-contra;
+  color: $c-font-prim;
+
+  &.padding5 {
+    padding: 5px 5px 5px 5px;
+  }
+  .items-list .item.items-header {
+    margin-top: 0px !important;
+  }
+
+  &.no-padding {
+    padding: 0 !important;
+    .box-header {
+      margin: 0 0 0 0;
+    }
+    & > div {
+      padding: 5px;
+    }
+  }
+
+  .box-header {
+    margin: 0 -5px 5px -5px;
+    padding: 5px 5px 2px 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    * {
+      padding: 0;
+      margin: 0;
+      color: white;
+    }
+  }
+}
+
+.bgOdd {
+  background-color: $f-list-green-1;
+}
+.bgEven {
+  background-color: $f-list-green-2;
+}

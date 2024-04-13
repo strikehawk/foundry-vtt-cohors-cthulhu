@@ -1,0 +1,28 @@
+$c-white: #fff;
+$c-black: #000;
+
+$c-dark: #191813;
+$c-faint: #c9c7b8;
+$c-beige: #b5b3a4;
+$c-tan: #444;
+
+$c-red: #d40000;
+$c-red-dark: #860a13;
+$c-gray-light: #999895;
+$c-gray-medium: #77767b;
+$c-gray-dark: #2b2a2c;
+
+$c-font-primary: #000;
+
+// legacy colors
+$c-font-prim: #000;
+$c-font-prim-contra: #fff;
+$c-font-sec: $c-gray-dark;
+
+$f-list-green-1: #0000002f;
+$f-list-green-2: #0000004f;
+$c-char-itemlist-bg: rgba(0, 0, 0, 0.2);
+$c-char-input-bg: rgba(0, 0, 0, 0.2);
+$c-char-input: $c-font-prim;
+$c-char-header: $c-font-prim;
+$c-npc-header: $c-font-prim;

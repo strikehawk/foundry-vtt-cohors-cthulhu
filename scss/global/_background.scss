@@ -1,0 +1,135 @@
+.cohors-cthulhu {
+  .window-content {
+    background-image: url("../assets/ui/bg-paper.webp");
+    background-size: auto;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      mask-image: url("../assets/ui/bg-border-02.webp");
+      mask-size: 120px;
+      mask-repeat: no-repeat;
+      background-color: $c-red-dark;
+
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  div.hand-drawn-borders {
+    position: relative;
+    padding: 12px 10px 8px 10px;
+
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 10px;
+      border-image-slice: 10;
+      border-image-repeat: repeat;
+
+      opacity: 0.4;
+
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:nth-of-type(4n)::before {
+      border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
+    }
+
+    &:nth-of-type(4n + 1)::before {
+      border-image-source: url("../assets/ui/boxes/hand-drawn-box2.webp");
+    }
+
+    &:nth-of-type(4n + 2)::before {
+      border-image-source: url("../assets/ui/boxes/hand-drawn-box3.webp");
+    }
+
+    &:nth-of-type(4n + 3)::before {
+      border-image-source: url("../assets/ui/boxes/hand-drawn-box4.webp");
+    }
+  }
+
+  .fieldset {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: stretch;
+
+    // min-width: 210px;
+    height: 40px;
+    margin-top: 10px;
+
+    .cell-header,
+    .content {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &.fixed {
+      $fixed-fieldset-width: 80px;
+      $fixed-fieldset-margin: 10px;
+      $fixed-header-width: $fixed-fieldset-width - 2 * $fixed-fieldset-margin;
+
+      min-width: $fixed-fieldset-width;
+      width: $fixed-fieldset-width;
+      align-items: stretch;
+      text-align: center;
+
+      .cell-header {
+        left: $fixed-fieldset-margin;
+        width: $fixed-header-width;
+        padding: 0;
+      }
+    }
+
+    .cell-header {
+      position: absolute;
+      display: block;
+      width: 80%;
+      height: 18px;
+      top: -6px;
+
+      padding-left: 8px;
+      padding-right: 8px;
+
+      font-weight: normal;
+
+      mask-image: url("../assets/ui/tables/table-header1.webp");
+      mask-size: 100% 100%;
+
+      &.bg-gray-medium,
+      &.bg-gray-dark {
+        color: white;
+      }
+
+      &.bg-gray-light {
+        background-color: $c-gray-light;
+      }
+
+      &.bg-gray-medium {
+        background-color: $c-gray-medium;
+      }
+
+      &.bg-gray-dark {
+        background-color: $c-gray-dark;
+      }
+    }
+
+    .content {
+      width: 100%;
+    }
+  }
+}

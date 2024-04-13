@@ -1,0 +1,27 @@
+// Add custom fonts by visiting and search https://fonts.google.com
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+// Import utilities.
+@import "utils/colors";
+@import "utils/typography";
+@import "utils/mixins";
+@import "utils/variables";
+
+@import "components/rolls";
+@import "components/ui-elements";
+
+@import "components/character/character-attributes";
+
+/* Global styles */
+@import "global/window";
+@import "global/grid";
+@import "global/flex";
+@import "global/flex-layout";
+@import "global/background";
+
+/* Styles limited to cohors cthulhu sheets */
+.cohors-cthulhu {
+  @import "components/forms";
+  @import "components/resource";
+  @import "components/items";
+}

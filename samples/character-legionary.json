@@ -1,0 +1,311 @@
+{
+    "name": "Tiberius Pontius Varro",
+    "archetype": {
+        "id": "soldier",
+        "focuses": [
+            "fighting-melee-weapons",
+            "resilience-fortitude"
+        ],
+        "talent": "legionnary-spec-legionnary-training",
+        "equipment": [
+            "sword-gladius",
+            "javelin",
+            "javelin",
+            "javelin",
+            "armor-lorica-segmentata",
+            "soldiers-kit"
+        ],
+        "agenda": {
+            "id": "agenda-soldier-claim-victory-in-battle"
+        }
+    },
+    "archetypeSpec": "soldier-legionary",
+    "caste": {
+        "id": "plebian-freedman"
+    },
+    "culture": {
+        "truth": {
+            "name": "Roman Citizen",
+            "personal": true,
+            "description": ""
+        },
+        "attributes": {
+            "agility": 2,
+            "brawn": 1,
+            "insight": 1
+        }
+    },
+    "background": {
+        "id": "background-campaign-veteran",
+        "focuses": [
+            "resilience-discipline",
+            "fighting-thrown-weapons"
+        ],
+        "talent": "resilience-second-wind",
+        "truth": {
+            "name": "Campaign Veteran",
+            "personal": true,
+            "description": ""
+        },
+        "equipment": [
+            "dagger"
+        ]
+    },
+    "characteristics": {
+        "id": "atlantean-ancestry",
+        "talent": "weird-foreboding-survival",
+        "truth": {
+            "name": "Atlantean Ancestry",
+            "personal": true,
+            "description": ""
+        },
+        "equipment": [
+            {
+                "name": "Médaillon cuivré familial",
+                "description": "",
+                "goodLuckCharm": true
+            }
+        ]
+    },
+    "attributes": {
+        "agility": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "archetype",
+                "value": 1
+            },
+            {
+                "source": "culture",
+                "value": 2
+            }
+        ],
+        "brawn": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "archetype",
+                "value": 2
+            },
+            {
+                "source": "culture",
+                "value": 1
+            },
+            {
+                "source": "background",
+                "value": 2
+            }
+        ],
+        "coordination": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "archetype",
+                "value": 2
+            },
+            {
+                "source": "culture",
+                "value": 1
+            },
+            {
+                "source": "characteristics",
+                "value": 1
+            }
+        ],
+        "gravitas": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "background",
+                "value": 1
+            },
+            {
+                "source": "characteristics",
+                "value": 2
+            }
+        ],
+        "insight": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "culture",
+                "value": 1
+            },
+            {
+                "source": "background",
+                "value": 2
+            }
+        ],
+        "reason": [
+            {
+                "source": "base",
+                "value": 6
+            }
+        ],
+        "will": [
+            {
+                "source": "base",
+                "value": 6
+            },
+            {
+                "source": "archetype",
+                "value": 1
+            },
+            {
+                "source": "background",
+                "value": 1
+            }
+        ]
+    },
+    "skills": {
+        "academia": {
+            "ranks": []
+        },
+        "athletics": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 2
+                },
+                {
+                    "source": "characteristics",
+                    "value": 2
+                }
+            ]
+        },
+        "crafting": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 1
+                }
+            ]
+        },
+        "engineering": {
+            "ranks": []
+        },
+        "fighting": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 2
+                },
+                {
+                    "source": "agenda",
+                    "id": "agenda-soldier-claim-victory-in-battle",
+                    "value": 1
+                },
+                {
+                    "source": "characteristics",
+                    "value": 1
+                }
+            ],
+            "focuses": [
+                "fighting-melee-weapons",
+                "fighting-thrown-weapons"
+            ]
+        },
+        "medicine": {
+            "ranks": []
+        },
+        "observation": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 1
+                }
+            ]
+        },
+        "persuasion": {
+            "ranks": []
+        },
+        "resilience": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 2
+                },
+                {
+                    "source": "characteristics",
+                    "value": 1
+                }
+            ],
+            "focuses": [
+                "resilience-fortitude",
+                "resilience-discipline"
+            ]
+        },
+        "stealth": {
+            "ranks": []
+        },
+        "survival": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 1
+                }
+            ]
+        },
+        "tactics": {
+            "ranks": [
+                {
+                    "source": "archetype",
+                    "value": 1
+                }
+            ]
+        }
+    },
+    "stress": {
+        "maximum": 14,
+        "current": 0
+    },
+    "resistance": {
+        "armor": [
+            {
+                "source": "attribute",
+                "value": 2
+            }
+        ],
+        "courage": [
+            {
+                "source": "attribute",
+                "value": 0
+            },
+            {
+                "source": "agenda",
+                "id": "agenda-soldier-claim-victory-in-battle",
+                "value": 1
+            }
+        ]
+    },
+    "bonusDamage": {
+        "melee": [
+            {
+                "source": "attribute",
+                "value": 2
+            }
+        ],
+        "ranged": [
+            {
+                "source": "attribute",
+                "value": 2
+            }
+        ],
+        "mental": [
+            {
+                "source": "attribute",
+                "value": 0
+            }
+        ]
+    }
+}

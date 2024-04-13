@@ -1,0 +1,50 @@
+{
+    "name": "foundry-vtt-cohors-cthulhu",
+    "version": "1.0.0",
+    "description": "CSS compiler for the Cohors Cthulhu 2d20 system",
+    "scripts": {
+        "build": "npm run build:ts & npm run build:css",
+        "build:ts": "tsc --build",
+        "build:css": "gulp build",
+        "compile": "gulp css",
+        "watch": "run-p watch:*",
+        "watch:ts": "tsc --watch",
+        "watch:css": "gulp",
+        "gulp": "gulp",
+        "link:foundry-vtt-types": "npm link foundry-vtt-types"
+    },
+    "browserslist": [
+        "last 3 versions"
+    ],
+    "author": "Strikehawk",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^9.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "sass": "^1.72.0"
+    },
+    "devDependencies": {
+        "@types/jquery": "3.5.29",
+        "@types/node": "20.11.30",
+        "@types/showdown": "^2.0.6",
+        "@typescript-eslint/eslint-plugin": "^6.4.0",
+        "foundry-vtt-types": "^2.0.3",
+        "gsap": "3.11.5",
+        "handlebars": "4.7.7",
+        "pixi.js": "6.5.2",
+        "socket.io": "^4.5.1",
+        "socket.io-client": "^4.5.1",
+        "tinymce": "^6.1.2",
+        "eslint": "^8.57.0",
+        "eslint-config-love": "^43.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "npm-run-all2": "6.1.2",
+        "typescript": "^5.4.3"
+    }
+}

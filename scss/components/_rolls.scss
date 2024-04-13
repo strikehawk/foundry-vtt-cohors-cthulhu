@@ -1,0 +1,21 @@
+.roll {
+    &.diecohorsdamage, &.diecohorscoin {
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+
+.dice-roll.challenge-roll {
+    .part-total {
+        display: flex;
+        flex-direction: row;
+        
+        img {
+            width: 24px;
+            height: 24px;
+            border: unset;
+        }
+    }
+}
