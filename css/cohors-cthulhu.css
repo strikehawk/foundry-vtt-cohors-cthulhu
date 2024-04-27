@@ -47,6 +47,324 @@
   mask-size: 100% 100%;
 }
 
+.table-header-01 {
+  -webkit-mask-box-image-width: 5px;
+  mask-border-width: 5px;
+  -webkit-mask-box-image-slice: 5 fill;
+  mask-border-slice: 5 fill;
+  -webkit-mask-box-image-repeat: repeat;
+  mask-border-repeat: repeat;
+  -webkit-mask-box-image-source: url("../assets/ui/tables/table-header1.webp");
+  mask-border-source: url("../assets/ui/tables/table-header1.webp");
+  border-color: #2b2a2c;
+  border-width: 5px;
+  border-style: solid;
+  background-color: #2b2a2c;
+}
+
+.cohors-cthulhu .window-content {
+  background-image: url("../assets/ui/bg-paper.webp");
+  background-size: auto;
+  position: relative;
+  z-index: 0;
+}
+.cohors-cthulhu .window-content::before {
+  content: "";
+  -webkit-mask-image: url("../assets/ui/bg-border-02.webp");
+  mask-image: url("../assets/ui/bg-border-02.webp");
+  -webkit-mask-size: 120px;
+  mask-size: 120px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: #860a13;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.cohors-cthulhu .ui-button {
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  background: none;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.cohors-cthulhu .ui-button:hover, .cohors-cthulhu .ui-button:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.cohors-cthulhu .ui-button:hover {
+  color: #ebc94e;
+  -webkit-filter: drop-shadow(1px 1px black);
+  filter: drop-shadow(1px 1px black);
+}
+.cohors-cthulhu fieldset {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  border: none;
+  position: relative;
+  padding: 12px 10px 8px 10px;
+  margin-top: 10px;
+}
+.cohors-cthulhu fieldset::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-image-slice: 10;
+  border-image-repeat: repeat;
+  opacity: 0.4;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.cohors-cthulhu fieldset:nth-of-type(4n)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
+}
+.cohors-cthulhu fieldset:nth-of-type(4n + 1)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box2.webp");
+}
+.cohors-cthulhu fieldset:nth-of-type(4n + 2)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box3.webp");
+}
+.cohors-cthulhu fieldset:nth-of-type(4n + 3)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box4.webp");
+}
+.cohors-cthulhu fieldset.single-field {
+  height: 40px;
+}
+.cohors-cthulhu fieldset .content {
+  font-family: "DominicanSmallCaps";
+}
+.cohors-cthulhu fieldset legend,
+.cohors-cthulhu fieldset .content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cohors-cthulhu fieldset.fixed {
+  min-width: 100px;
+  width: 100px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  text-align: center;
+}
+.cohors-cthulhu fieldset.fixed legend {
+  left: 10px;
+  width: 80px;
+  padding: 0;
+}
+.cohors-cthulhu fieldset legend {
+  font-family: "DominicanSmallCaps";
+  font-size: small;
+  font-weight: bold;
+  position: absolute;
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  height: 18px;
+  top: -6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: normal;
+  background-color: #2b2a2c;
+  -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
+  mask-image: url("../assets/ui/tables/table-header1.webp");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  color: white;
+}
+.cohors-cthulhu fieldset .content {
+  width: 100%;
+}
+
+.hand-drawn-borders {
+  position: relative;
+  padding: 12px 10px 8px 10px;
+}
+.hand-drawn-borders::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-image-slice: 10;
+  border-image-repeat: repeat;
+  opacity: 0.4;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.hand-drawn-borders:nth-of-type(4n)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
+}
+.hand-drawn-borders:nth-of-type(4n + 1)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box2.webp");
+}
+.hand-drawn-borders:nth-of-type(4n + 2)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box3.webp");
+}
+.hand-drawn-borders:nth-of-type(4n + 3)::before {
+  border-image-source: url("../assets/ui/boxes/hand-drawn-box4.webp");
+}
+
+.chip-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.chip {
+  font-family: "DominicanSmallCaps";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  background-color: black;
+  -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
+  mask-image: url("../assets/ui/tables/table-header1.webp");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  color: white;
+  padding: 0 8px;
+}
+.chip span {
+  margin-right: 10px;
+}
+.chip div {
+  font-size: 8px;
+}
+
+.cc-keyword-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.cc-keyword-list legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  font-family: "DominicanSmallCaps";
+  font-size: small;
+  font-weight: bold;
+  font-weight: normal;
+  color: white;
+}
+.cc-keyword-list legend span {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.cc-keyword-list ul {
+  list-style: none;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.cc-keyword-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  font-weight: normal;
+  padding: 2px 4px 2px 4px;
+}
+.cc-keyword-list ul li input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.cc-keyword-list ul li button.ui-button {
+  background-color: #2b2a2c;
+  -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
+  mask-image: url("../assets/ui/tables/table-header1.webp");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
 .character-attributes .attribute {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +377,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   padding: 8px;
   -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
   mask-image: url("../assets/ui/tables/table-header1.webp");
@@ -85,8 +406,8 @@
   gap: 4px;
 }
 .character-attributes .attribute .value-row .value {
-  font-size: 36px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 24px;
 }
 .character-attributes .attribute .value-row .bonus-damage {
   display: -webkit-box;
@@ -104,9 +425,110 @@
   color: #77767b;
 }
 .character-attributes .attribute .value-row .bonus-damage .challenge-die {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #77767b;
+}
+
+.cohors-cthulhu fieldset.character-stress-chart {
+  height: unset;
+  padding: 16px 10px 8px 10px;
+}
+.cohors-cthulhu fieldset.character-stress-chart .stress-boxes {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 6px;
+  -moz-column-gap: 6px;
+  column-gap: 6px;
+  row-gap: 6px;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  grid-row: 2;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box:nth-of-type(-n + 10) {
+  grid-row: 1;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box.available {
+  background-color: white;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box.used {
+  background-color: #d40000;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box.fatigue {
+  background-color: #77767b;
+}
+.cohors-cthulhu fieldset.character-stress-chart div.stress-box.over-max {
+  background-color: black;
+}
+
+fieldset.character-fortune {
+  min-width: 120px;
+  width: 120px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  text-align: center;
+}
+fieldset.character-fortune legend {
+  left: 10px;
+  width: 100px;
+  padding: 0;
+}
+
+.fortune-container .label {
+  font-family: "DominicanSmallCaps";
+  font-size: small;
+  font-weight: bold;
+}
+.fortune-container .fortune-boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  -webkit-column-gap: 3px;
+  -moz-column-gap: 3px;
+  column-gap: 3px;
+}
+.fortune-container div.fortune-box {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  grid-row: 1;
+}
+.fortune-container div.fortune-box.available {
+  background-color: white;
+}
+.fortune-container div.fortune-box.used {
+  background-color: #d40000;
+}
+.fortune-container div.fortune-box.fatigue {
+  background-color: #77767b;
+}
+.fortune-container div.fortune-box.over-max {
+  background-color: black;
+}
+
+.sheet.item.talent {
+  min-width: 400px;
+}
+.sheet.item.talent section.sheet-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  gap: 8px;
 }
 
 /* Global styles */
@@ -714,127 +1136,6 @@
   max-width: 100%;
 }
 
-.cohors-cthulhu .window-content {
-  background-image: url("../assets/ui/bg-paper.webp");
-  background-size: auto;
-  position: relative;
-  z-index: 0;
-}
-.cohors-cthulhu .window-content::before {
-  content: "";
-  -webkit-mask-image: url("../assets/ui/bg-border-02.webp");
-  mask-image: url("../assets/ui/bg-border-02.webp");
-  -webkit-mask-size: 120px;
-  mask-size: 120px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  background-color: #860a13;
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.cohors-cthulhu div.hand-drawn-borders {
-  position: relative;
-  padding: 12px 10px 8px 10px;
-}
-.cohors-cthulhu div.hand-drawn-borders::before {
-  content: "";
-  border-style: solid;
-  border-width: 10px;
-  border-image-slice: 10;
-  border-image-repeat: repeat;
-  opacity: 0.4;
-  position: absolute;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.cohors-cthulhu div.hand-drawn-borders:nth-of-type(4n)::before {
-  border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
-}
-.cohors-cthulhu div.hand-drawn-borders:nth-of-type(4n + 1)::before {
-  border-image-source: url("../assets/ui/boxes/hand-drawn-box2.webp");
-}
-.cohors-cthulhu div.hand-drawn-borders:nth-of-type(4n + 2)::before {
-  border-image-source: url("../assets/ui/boxes/hand-drawn-box3.webp");
-}
-.cohors-cthulhu div.hand-drawn-borders:nth-of-type(4n + 3)::before {
-  border-image-source: url("../assets/ui/boxes/hand-drawn-box4.webp");
-}
-.cohors-cthulhu .fieldset {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-  height: 40px;
-  margin-top: 10px;
-}
-.cohors-cthulhu .fieldset .cell-header,
-.cohors-cthulhu .fieldset .content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.cohors-cthulhu .fieldset.fixed {
-  min-width: 80px;
-  width: 80px;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  text-align: center;
-}
-.cohors-cthulhu .fieldset.fixed .cell-header {
-  left: 10px;
-  width: 60px;
-  padding: 0;
-}
-.cohors-cthulhu .fieldset .cell-header {
-  position: absolute;
-  display: block;
-  width: 80%;
-  height: 18px;
-  top: -6px;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-weight: normal;
-  -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
-  mask-image: url("../assets/ui/tables/table-header1.webp");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-}
-.cohors-cthulhu .fieldset .cell-header.bg-gray-medium, .cohors-cthulhu .fieldset .cell-header.bg-gray-dark {
-  color: white;
-}
-.cohors-cthulhu .fieldset .cell-header.bg-gray-light {
-  background-color: #999895;
-}
-.cohors-cthulhu .fieldset .cell-header.bg-gray-medium {
-  background-color: #77767b;
-}
-.cohors-cthulhu .fieldset .cell-header.bg-gray-dark {
-  background-color: #2b2a2c;
-}
-.cohors-cthulhu .fieldset .content {
-  width: 100%;
-}
-
 /* Styles limited to cohors cthulhu sheets */
 .cohors-cthulhu {
   /* ----------------------------------------- */
@@ -902,27 +1203,23 @@
   font-family: "DominicanSmallCaps";
   text-transform: uppercase;
 }
-.cohors-cthulhu .fallout.sheet .window-content form {
-  height: 100%;
-  overflow: hidden;
-}
-.cohors-cthulhu .fallout.sheet .window-content .tab {
-  height: 100%;
-  overflow-y: auto;
-}
-.cohors-cthulhu .fallout.sheet .editor {
-  height: 100%;
-}
-.cohors-cthulhu .fallout.sheet .editor .editor-content {
-  height: 100%;
-}
 .cohors-cthulhu .description-field {
-  background: rgba(245, 245, 220, 0.301);
-  padding: 0 5px;
-  border: 1px solid lightgray;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgb(122, 121, 113);
 }
 .cohors-cthulhu .description-field .editor {
   height: 100%;
+}
+.cohors-cthulhu .description-field .tox-edit-area,
+.cohors-cthulhu .description-field .editor-content {
+  padding: 0 4px;
+}
+.cohors-cthulhu .description-field .tox.tox-tinymce {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.cohors-cthulhu .description-field .tox.tox-tinymce .tox-editor-header {
+  padding-top: 0;
 }
 .cohors-cthulhu .editor .editor-content {
   min-height: 200px;
@@ -965,9 +1262,23 @@
 .cohors-cthulhu .bgEven {
   background-color: rgba(0, 0, 0, 0.3098039216);
 }
+.cohors-cthulhu input {
+  border: 1px solid rgb(122, 121, 113);
+  border-radius: 0;
+}
+.cohors-cthulhu input:focus, .cohors-cthulhu input:hover {
+  -webkit-box-shadow: 0 0 5px rgb(110, 78, 17);
+  box-shadow: 0 0 5px rgb(110, 78, 17);
+}
+.cohors-cthulhu button:hover {
+  -webkit-box-shadow: 0 0 5px rgb(110, 78, 17);
+  box-shadow: 0 0 5px rgb(110, 78, 17);
+}
 .cohors-cthulhu input[type=text],
 .cohors-cthulhu input[type=number] {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  padding: 2px 4px;
 }
 .cohors-cthulhu input[type=text].underline,
 .cohors-cthulhu input[type=number].underline {

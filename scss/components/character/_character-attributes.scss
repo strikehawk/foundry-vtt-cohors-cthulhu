@@ -4,6 +4,7 @@
     flex-direction: column;
     place-content: center flex-start;
     align-items: center;
+    flex: 1 1 100%;
 
     padding: 8px;
     mask-image: url("../assets/ui/tables/table-header1.webp");
@@ -23,8 +24,8 @@
       gap: 4px;
 
       .value {
-        font-size: 36px;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 24px;
       }
 
       .bonus-damage {
@@ -37,7 +38,7 @@
         color: $c-gray-medium;
 
         .challenge-die {
-          $die-size: 20px;
+          $die-size: 18px;
 
           width: $die-size;
           height: $die-size;

@@ -1,0 +1,81 @@
+{
+    "name": "Mystic",
+    "attributes": {
+        "agility": 0,
+        "brawn": 0,
+        "coordination": 1,
+        "gravitas": 2,
+        "insight": 0,
+        "reason": 1,
+        "will": 2
+    },
+    "focuses": [
+        {
+            "count": 2,
+            "filter": "name",
+            "choices": [
+                "Finance",
+                "History",
+                "Linguistics",
+                "Philosophy",
+                "Religion",
+                "Contagion",
+                "Faith Healing",
+                "Field Treatment",
+                "Pharmacia",
+                "Surgery",
+                "Charm",
+                "Deception",
+                "Innuendo",
+                "Intimidation",
+                "Invocation",
+                "Negotiation",
+                "Rhetoric"
+            ]
+        }
+    ],
+    "talent": [
+        {
+            "count": 1,
+            "filter": "keywords",
+            "choices": [
+                "mystic",
+                "occult-dabbler",
+                "mystic-specialization,core-talent"
+            ]
+        }
+    ],
+    "equipment": [
+        {
+            "type": "item-filter",
+            "count": 1,
+            "maxRestriction": 3,
+            "keywords": "melee-weapon"
+        },
+        {
+            "type": "item",
+            "name": "Traveling clothes",
+            "restriction": 0
+        },
+        {
+            "type": "item",
+            "name": "Ritual vestments",
+            "restriction": 1
+        },
+        {
+            "type": "item",
+            "name": "Ritual tools",
+            "skill": "Academia (Religion)",
+            "restriction": 2,
+            "weight": "minor",
+            "uses": 3
+        }
+    ],
+    "personalAgendas": [
+        {
+            "type": "agenda",
+            "name": "...",
+            "description": "..."
+        }
+    ]
+}

@@ -1,9 +1,25 @@
+input {
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 5px $c-char-input-shadow;
+  }
+
+  border: 1px solid $c-border-color;
+  border-radius: 0;
+}
+
+button {
+  &:hover {
+    box-shadow: 0 0 5px $c-char-input-shadow;
+  }
+}
+
 input[type="text"],
 input[type="number"] {
-  // background-color: #f0f0f0;
-  // color: black;
   background-color: $c-char-input-bg;
-  // color: $c-char-input;
+  border-radius: 0;
+  padding: 2px 4px;
+
   &.underline {
     background-color: unset;
     border: unset;

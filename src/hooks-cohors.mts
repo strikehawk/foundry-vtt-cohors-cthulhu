@@ -16,28 +16,8 @@ export abstract class HooksCohors {
     CustomConfig.register();
 
     Hooks.once("init", async function () {
-      // // Add utility classes to the global game object so that they're more easily
-      // // accessible in global contexts.
-      // game.fallout = {
-      //   FalloutActor,
-      //   FalloutItem,
-      //   rollItemMacro,
-      //   Roller2D20,
-      //   Dialog2d20,
-      //   DialogD6,
-      //   FOHovers,
-      //   APTracker
-      // }
-
-      // // Add custom constants for configuration.
-      // CONFIG.FALLOUT = FALLOUT;
-      // CONFIG.COHORS = COHORS;
-
       RollConfiguration.initialize();
 
-      // Define custom Document classes
-      // CONFIG.Actor.documentClass = FalloutActor
-      // CONFIG.Item.documentClass = FalloutItem
       SystemData.register();
 
       // // Register custom system settings

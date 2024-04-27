@@ -5,44 +5,119 @@
         <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="8px" fxFlex>
             {{!-- first data row --}}
             <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
-                <div class="fieldset hand-drawn-borders" fxFlex>
-                    <span class="cell-header bg-gray-dark cc-subtitle">Name</span>
-                    <span class="content cc-title">Tiberius Gaius Rodus</span>
-                </div>
+                <fieldset class="single-field" fxFlex>
+                    <legend>Name</legend>
+                    <span class="content">Tiberius Gaius Rodus</span>
+                </fieldset>
 
-                <div class="fieldset hand-drawn-borders">
-                    <span class="cell-header bg-gray-dark cc-subtitle">Culture</span>
-                    <span class="content cc-title">Roman Citizen</span>
-                </div>
+                <fieldset class="single-field">
+                    <legend>Culture</legend>
+                    <span class="content">Roman Citizen</span>
+                </fieldset>
 
-                <div class="fieldset hand-drawn-borders">
-                    <span class="cell-header bg-gray-dark cc-subtitle">Caste</span>
-                    <span class="content cc-title">Plebian / Freedman</span>
-                </div>
+                <fieldset class="single-field">
+                    <legend>Caste</legend>
+                    <span class="content">Plebian / Freedman</span>
+                </fieldset>
 
-                <div class="fieldset fixed hand-drawn-borders">
-                    <span class="cell-header bg-gray-dark cc-subtitle">Wealth</span>
-                    <span class="content cc-title">2</span>
-                </div>
+                <fieldset class="single-field fixed">
+                    <legend>Wealth</legend>
+                    <span class="content">2</span>
+                </fieldset>
             </div>
 
             {{!-- second data row --}}
             <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
-                <div class="fieldset hand-drawn-borders" fxFlex>
-                    <span class="cell-header bg-gray-dark cc-subtitle">Archetype</span>
-                    <span class="content cc-title">Soldier / Legionary</span>
-                </div>
+                <fieldset class="single-field" fxFlex>
+                    <legend>Archetype</legend>
+                    <span class="content">Soldier / Legionary</span>
+                </fieldset>
 
-                <div class="fieldset hand-drawn-borders" fxFlex>
-                    <span class="cell-header bg-gray-dark cc-subtitle">Background</span>
-                    <span class="content cc-title">Campaign Veteran</span>
-                </div>
+                <fieldset class="single-field" fxFlex>
+                    <legend>Background</legend>
+                    <span class="content">Campaign Veteran</span>
+                </fieldset>
 
-                <div class="fieldset hand-drawn-borders" fxFlex>
-                    <span class="cell-header bg-gray-dark cc-subtitle">Characteristic</span>
-                    <span class="content cc-title">Atlantean Ancestry</span>
-                </div>
+                <fieldset class="single-field" fxFlex>
+                    <legend>Characteristic</legend>
+                    <span class="content">Atlantean Ancestry</span>
+                </fieldset>
             </div>
         </div>
+    </div>
+
+    {{!-- third data row --}}
+    <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
+        <fieldset>
+            <legend>Truths</legend>
+            <div class="chip-container">
+                <div class="chip">
+                    <span>Roman Citizen</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Campaign Veteran</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Atlantean Ancestry</span>
+                    <div>X</div>
+                </div>
+            </div>
+        </fieldset>
+
+        {{> characterStressChart }}
+
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="4px">
+            <fieldset class="fixed" fxFlex>
+                <legend>Armor</legend>
+                <span class="content">5</span>
+            </fieldset>
+            <fieldset class="fixed" fxFlex>
+                <legend>Courage</legend>
+                <span class="content">1</span>
+            </fieldset>
+        </div>
+    </div>
+    
+    {{!-- fourth data row --}}
+        <div fxLayout="row" fxLayoutAlign="start bottom" fxLayoutGap="8px">
+        <fieldset fxFlex>
+            <legend>Injuries</legend>
+            <div class="chip-container">
+                <div class="chip">
+                    <span>Coup de lance à l'abdomen (P)</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Peur (M)</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Cheville foulée (P)</span>
+                    <div>X</div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset fxFlex>
+            <legend>Scars</legend>
+            <div class="chip-container">
+                <div class="chip">
+                    <span>Douleur chronique (P)</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Obsession: Gladius de la campagne de Mythilène</span>
+                    <div>X</div>
+                </div>
+                <div class="chip">
+                    <span>Cicatrice caractéristique (P)</span>
+                    <div>X</div>
+                </div>
+            </div>
+        </fieldset>
+
+        {{> characterFortune }}
     </div>
 </header>

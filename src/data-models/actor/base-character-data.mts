@@ -2,7 +2,7 @@ import { DataSchema } from "foundry-vtt-types/common/data/fields.js";
 import { AttributeBlock } from "./attributes.mjs";
 import { SkillBlock } from "./skills.mjs";
 import {
-  NumericValueModifierSchemaField,
+  NumericValueModifierField,
   PositiveValueField,
   SystemModifierSources,
 } from "../numeric-values.mjs";
@@ -24,12 +24,12 @@ export class BaseCharacterData {
       ),
       resistance: new fields.SchemaField(
         {
-          armor: NumericValueModifierSchemaField(
+          armor: NumericValueModifierField(
             SystemModifierSources,
             "attribute",
             0
           ),
-          courage: NumericValueModifierSchemaField(
+          courage: NumericValueModifierField(
             SystemModifierSources,
             "attribute",
             0
@@ -39,17 +39,17 @@ export class BaseCharacterData {
       ),
       bonusDamage: new fields.SchemaField(
         {
-          melee: NumericValueModifierSchemaField(
+          melee: NumericValueModifierField(
             SystemModifierSources,
             "attribute",
             0
           ),
-          ranged: NumericValueModifierSchemaField(
+          ranged: NumericValueModifierField(
             SystemModifierSources,
             "attribute",
             0
           ),
-          mental: NumericValueModifierSchemaField(
+          mental: NumericValueModifierField(
             SystemModifierSources,
             "attribute",
             0

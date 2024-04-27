@@ -1,4 +1,5 @@
 $c-white: #fff;
+$c-white-hover: #ebc94e;
 $c-black: #000;
 
 $c-dark: #191813;
@@ -22,7 +23,10 @@ $c-font-sec: $c-gray-dark;
 $f-list-green-1: #0000002f;
 $f-list-green-2: #0000004f;
 $c-char-itemlist-bg: rgba(0, 0, 0, 0.2);
-$c-char-input-bg: rgba(0, 0, 0, 0.2);
+
+$c-border-color: rgb(122, 121, 113);
+$c-char-input-bg: rgba(255, 255, 255, 0.8);
+$c-char-input-shadow: rgb(110, 78, 17);
 $c-char-input: $c-font-prim;
 $c-char-header: $c-font-prim;
 $c-npc-header: $c-font-prim;

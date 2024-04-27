@@ -58,29 +58,26 @@
   text-transform: uppercase;
 }
 
-.fallout.sheet .window-content form {
-  height: 100%;
-  overflow: hidden;
-}
-
-.fallout.sheet .window-content .tab {
-  height: 100%;
-  overflow-y: auto;
-}
-
-.fallout.sheet .editor {
-  height: 100%;
-}
-.fallout.sheet .editor .editor-content {
-  height: 100%;
-}
-
 .description-field {
-  background: rgba(245, 245, 220, 0.301);
-  padding: 0 5px;
-  border: 1px solid lightgray;
+  background: $c-char-input-bg;
+  border: 1px solid $c-border-color;
+
   .editor {
     height: 100%;
+  }
+
+  .tox-edit-area,
+  .editor-content {
+    padding: 0 4px;
+  }
+
+  .tox.tox-tinymce {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .tox-editor-header {
+      padding-top: 0;
+    }
   }
 }
 

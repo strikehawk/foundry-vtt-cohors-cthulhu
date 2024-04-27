@@ -1,0 +1,49 @@
+.cc-keyword-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+
+  legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+
+    @include cc-subtitle;
+    font-weight: normal;
+    color: white;
+
+    span {
+      flex: 1 1 auto;
+    }
+  }
+
+  ul {
+    list-style: none;
+    flex: 1 1 auto;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 4px;
+
+      font-weight: normal;
+
+      padding: 2px 4px 2px 4px;
+
+      input {
+        flex: 1 1 auto;
+      }
+
+      button.ui-button {
+        background-color: $c-gray-dark;
+        mask-image: url("../assets/ui/tables/table-header1.webp");
+        mask-size: 100% 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="cc-keyword-list">
+  <legend class="table-header-01">
+    <span>Keywords</span>
+    <button class="ui-button add-keyword" title="Add new keyword">+</button>
+  </legend>
+  <ul>
+    {{#each context}}
+      <li>
+        <input
+          name="{{../target}}.{{@index}}"
+          type="text"
+          value="{{this}}"
+          placeholder="Keyword"
+        />
+        <button class="ui-button delete-keyword" data-index="{{@index}}" title="Remove keyword">-</button>
+      </li>
+    {{/each}}
+  </ul>
+</div>

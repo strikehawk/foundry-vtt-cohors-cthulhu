@@ -1,0 +1,49 @@
+$stress-box-width: 30px;
+$stress-box-gap: 6px;
+$stress-boxes-per-row: 10;
+
+.cohors-cthulhu fieldset.character-stress-chart {
+  height: unset;
+  padding: 16px 10px 8px 10px;
+
+  $stress-box-width: 30px;
+  $stress-box-gap: 6px;
+  $stress-boxes-per-row: 10;
+
+  .stress-boxes {
+    display: grid;
+    grid-template-columns: repeat($stress-boxes-per-row, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: $stress-box-gap;
+    row-gap: $stress-box-gap;
+  }
+
+  div.stress-box {
+    width: $stress-box-width;
+    height: $stress-box-width;
+
+    border: 1px solid black;
+
+    grid-row: 2;
+
+    &:nth-of-type(-n + 10) {
+      grid-row: 1;
+    }
+
+    &.available {
+      background-color: white;
+    }
+
+    &.used {
+      background-color: $c-red;
+    }
+
+    &.fatigue {
+      background-color: $c-gray-medium;
+    }
+
+    &.over-max {
+      background-color: black;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{> itemHeader itemType="Talent" showTag="true"}}
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <div class="tab description-field">
+      {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{> keywordList target="system.keywords" context=system.keywords}}
+  </section>
+</form>

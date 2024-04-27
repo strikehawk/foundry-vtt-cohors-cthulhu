@@ -2,9 +2,11 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
         <div class="flex" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="8px">
+            <span class="cc-title">{{itemType}}</span>
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-            <h2 class="tag"><input name="tag" type="text" value="{{item.system.tag}}" placeholder="Tag" /></h3>
-            <span class="cc-title">Truth</span>
+            {{#if showTag}}
+            <h2 class="tag"><input name="system.tag" type="text" value="{{system.tag}}" placeholder="Tag" /></h3>
+            {{/if}}
         </div>
     </div>
 </header>
