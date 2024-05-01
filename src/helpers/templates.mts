@@ -16,7 +16,7 @@ export const preloadHandlebarsTemplates = async function (): Promise<void> {
 
   // load named partials
   await loadTemplates({
-    keywordList: `${SYSTEM_PATH}/templates/general/keyword-list.hbs`,
+    keywordList: `${SYSTEM_PATH}/templates/components/keyword-list.hbs`,
 
     characterHeader: `${SYSTEM_PATH}/templates/actor/parts/actor-character-header.hbs`,
     characterAttributes: `${SYSTEM_PATH}/templates/actor/parts/actor-character-attributes.hbs`,

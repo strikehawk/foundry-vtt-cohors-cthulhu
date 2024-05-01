@@ -11,6 +11,9 @@
           type="text"
           value="{{this}}"
           placeholder="Keyword"
+          {{#if (lookup ../contextValidation @index)}}
+          class="error"
+          {{/if}}
         />
         <button class="ui-button delete-keyword" data-index="{{@index}}" title="Remove keyword">-</button>
       </li>

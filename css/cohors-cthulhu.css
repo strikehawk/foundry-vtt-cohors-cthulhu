@@ -79,10 +79,10 @@
   background-color: #860a13;
   position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: -1;
 }
 .cohors-cthulhu .ui-button {
@@ -363,6 +363,98 @@
   mask-image: url("../assets/ui/tables/table-header1.webp");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+
+/* ---------------------------------- */
+/*  Slide Toggles                     */
+/* ---------------------------------- */
+slide-toggle {
+  --slide-toggle-height: 20px;
+  --slide-toggle-width: 36px;
+  --slide-toggle-padding: 3px;
+  --slide-toggle-track-color-unchecked: black;
+  --slide-toggle-track-color-checked: #3ba55d;
+  --slide-toggle-thumb-color: white;
+  --slide-toggle-thumb-width: calc(
+    var(--slide-toggle-height) - var(--slide-toggle-padding) * 2
+  );
+  --slide-toggle-thumb-height: var(--slide-toggle-thumb-width);
+  --slide-toggle-transition-time: 250ms;
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: var(--slide-toggle-width);
+  height: var(--slide-toggle-height);
+  cursor: pointer;
+  /* Checked state */
+}
+slide-toggle .slide-toggle-track {
+  width: 100%;
+  height: 100%;
+  background: var(--slide-toggle-track-color-unchecked);
+  border-radius: calc(var(--slide-toggle-height) * 2 / 3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  padding: var(--slide-toggle-padding);
+}
+slide-toggle .slide-toggle-thumb {
+  width: var(--slide-toggle-thumb-width);
+  height: var(--slide-toggle-thumb-height);
+  border-radius: 100%;
+  background: var(--slide-toggle-thumb-color);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  -webkit-transition: margin-left var(--slide-toggle-transition-time) ease;
+  transition: margin-left var(--slide-toggle-transition-time) ease;
+}
+slide-toggle[checked] .slide-toggle-track {
+  background: var(--slide-toggle-track-color-checked);
+}
+slide-toggle[checked] .slide-toggle-thumb {
+  margin-left: calc(100% - var(--slide-toggle-thumb-width));
+}
+
+.sheet > header {
+  position: relative;
+  z-index: 1;
+  /* Edit Mode Toggle */
+}
+.sheet > header > slide-toggle {
+  -ms-flex-item-align: center;
+  align-self: center;
+  --slide-toggle-track-color-checked: #9f9275;
+  --slide-toggle-track-color-unchecked: #999895;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 8px;
+}
+.sheet > header > slide-toggle .slide-toggle-thumb {
+  line-height: 12px;
+}
+.sheet > header > slide-toggle .slide-toggle-thumb::before {
+  content: "\f0ad";
+  font-family: var(--font-awesome);
+  color: #999895;
+  font-weight: bold;
+  font-size: 0.5625rem;
+}
+.sheet > header > slide-toggle[checked] .slide-toggle-thumb::before {
+  color: #9f9275;
 }
 
 .character-attributes .attribute {
@@ -1270,6 +1362,11 @@ fieldset.character-fortune legend {
   -webkit-box-shadow: 0 0 5px rgb(110, 78, 17);
   box-shadow: 0 0 5px rgb(110, 78, 17);
 }
+.cohors-cthulhu input.error {
+  -webkit-box-shadow: 0 0 5px #860a13;
+  box-shadow: 0 0 5px #860a13;
+  border-color: #860a13;
+}
 .cohors-cthulhu button:hover {
   -webkit-box-shadow: 0 0 5px rgb(110, 78, 17);
   box-shadow: 0 0 5px rgb(110, 78, 17);
@@ -1279,6 +1376,22 @@ fieldset.character-fortune legend {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0;
   padding: 2px 4px;
+}
+.cohors-cthulhu input[type=text]::-webkit-input-placeholder, .cohors-cthulhu input[type=number]::-webkit-input-placeholder {
+  color: #999895;
+}
+.cohors-cthulhu input[type=text]::-moz-placeholder, .cohors-cthulhu input[type=number]::-moz-placeholder {
+  color: #999895;
+}
+.cohors-cthulhu input[type=text]:-ms-input-placeholder, .cohors-cthulhu input[type=number]:-ms-input-placeholder {
+  color: #999895;
+}
+.cohors-cthulhu input[type=text]::-ms-input-placeholder, .cohors-cthulhu input[type=number]::-ms-input-placeholder {
+  color: #999895;
+}
+.cohors-cthulhu input[type=text]::placeholder,
+.cohors-cthulhu input[type=number]::placeholder {
+  color: #999895;
 }
 .cohors-cthulhu input[type=text].underline,
 .cohors-cthulhu input[type=number].underline {

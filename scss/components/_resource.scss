@@ -4,6 +4,11 @@ input {
     box-shadow: 0 0 5px $c-char-input-shadow;
   }
 
+  &.error {
+    box-shadow: 0 0 5px $c-red-dark;
+    border-color: $c-red-dark;
+  }
+
   border: 1px solid $c-border-color;
   border-radius: 0;
 }
@@ -19,6 +24,10 @@ input[type="number"] {
   background-color: $c-char-input-bg;
   border-radius: 0;
   padding: 2px 4px;
+
+  &::placeholder {
+    color: $c-gray-light;
+  }
 
   &.underline {
     background-color: unset;

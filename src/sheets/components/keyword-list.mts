@@ -24,7 +24,7 @@ export class KeywordListHandler {
     // add new keyword
     html.on(
       "click",
-      ".keyword-list .add-keyword",
+      ".cc-keyword-list .add-keyword",
       undefined,
       async (ev: JQuery.Event) => {
         await adapter.sheet.submit();
@@ -47,7 +47,7 @@ export class KeywordListHandler {
     // remove keyword
     html.on(
       "click",
-      ".keyword-list .delete-keyword",
+      ".cc-keyword-list .delete-keyword",
       undefined,
       async (ev: JQuery.Event) => {
         ev.preventDefault();

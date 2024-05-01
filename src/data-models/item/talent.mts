@@ -2,7 +2,11 @@ import {
   HTMLField,
   StringField,
 } from "foundry-vtt-types/common/data/fields.js";
-import { StringArrayField } from "../field-utils.mjs";
+import {
+  AbstractData,
+  BaseDataModel,
+  StringArrayField,
+} from "../data-model-utils.mjs";
 
 export type TalentDataSchema = {
   tag: StringField<string, string, boolean, boolean, boolean>;
@@ -11,16 +15,19 @@ export type TalentDataSchema = {
   prerequisiteTags: StringArrayField;
 };
 
-export class TalentDataModel extends foundry.abstract.TypeDataModel {
+export class TalentDataModel extends BaseDataModel {
   public static override defineSchema(): TalentDataSchema {
     const fields = foundry.data.fields;
 
     return {
       tag: new fields.StringField({ required: true }),
       description: new fields.HTMLField({ required: false }),
-      keywords: new fields.ArrayField(new fields.StringField(), {
-        required: true,
-      }),
+      keywords: new fields.ArrayField(
+        new fields.StringField({ required: true, blank: false }),
+        {
+          required: true,
+        }
+      ),
       prerequisiteTags: new fields.ArrayField(new fields.StringField(), {
         required: false,
       }),
@@ -28,7 +35,7 @@ export class TalentDataModel extends foundry.abstract.TypeDataModel {
   }
 }
 
-export interface TalentData {
+export interface TalentData extends AbstractData<TalentDataSchema> {
   tag: string;
   description: string;
   keywords: string[];

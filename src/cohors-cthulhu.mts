@@ -1,14 +1,10 @@
 // Import helper/utility classes and constants.
 import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs";
+import { CustomComponents } from "./helpers/custom-components.mjs";
 
 import { HooksCohors } from "./hooks-cohors.mjs";
 
-/* -------------------------------------------- */
-/*  Handlebars Helpers                          */
-/* -------------------------------------------- */
 registerHandlebarsHelpers();
+CustomComponents.defineComponents();
 
-/* -------------------------------------------- */
-/*  Init Hook                                   */
-/* -------------------------------------------- */
 HooksCohors.listen();
