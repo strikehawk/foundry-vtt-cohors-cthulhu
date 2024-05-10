@@ -1,8 +1,11 @@
 <div class="cc-keyword-list">
   <legend class="table-header-01">
     <span>Keywords</span>
+    {{#if editable}}
     <button class="ui-button add-keyword" title="Add new keyword">+</button>
+    {{/if}}
   </legend>
+  {{#if editable}}
   <ul>
     {{#each context}}
       <li>
@@ -19,4 +22,13 @@
       </li>
     {{/each}}
   </ul>
+  {{else}}
+  <div class="chip-container">
+    {{#each context}}
+    <div class="chip">
+        <span>{{this}}</span>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
 </div>

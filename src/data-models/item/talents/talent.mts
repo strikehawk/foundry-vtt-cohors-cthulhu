@@ -1,18 +1,30 @@
 import {
-  HTMLField,
-  StringField,
-} from "foundry-vtt-types/common/data/fields.js";
-import {
   AbstractData,
   BaseDataModel,
   StringArrayField,
-} from "../data-model-utils.mjs";
+} from "../../data-model-utils.mjs";
+import {
+  TalentRequirementData,
+  TalentRequirementField,
+} from "./base-talent-requirement.mjs";
 
 export type TalentDataSchema = {
-  tag: StringField<string, string, boolean, boolean, boolean>;
-  description: HTMLField<string, string, boolean, boolean, boolean>;
+  tag: foundry.data.fields.StringField<
+    string,
+    string,
+    boolean,
+    boolean,
+    boolean
+  >;
+  description: foundry.data.fields.HTMLField<
+    string,
+    string,
+    boolean,
+    boolean,
+    boolean
+  >;
   keywords: StringArrayField;
-  prerequisiteTags: StringArrayField;
+  requirement: TalentRequirementField;
 };
 
 export class TalentDataModel extends BaseDataModel {
@@ -28,8 +40,10 @@ export class TalentDataModel extends BaseDataModel {
           required: true,
         }
       ),
-      prerequisiteTags: new fields.ArrayField(new fields.StringField(), {
+      requirement: new TalentRequirementField({
         required: false,
+        nullable: true,
+        initial: undefined,
       }),
     };
   }
@@ -39,7 +53,7 @@ export interface TalentData extends AbstractData<TalentDataSchema> {
   tag: string;
   description: string;
   keywords: string[];
-  prerequisiteTags: string[];
+  requirement?: TalentRequirementData;
 }
 
 export class Talent extends Item {

@@ -1,11 +1,10 @@
 <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <img class="profile-img" src="{{item.img}}" {{#if editable}}data-edit="img"{{/if}} title="{{item.name}}" />
     <div class="header-fields">
         <div class="flex" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="8px">
-            <span class="cc-title">{{itemType}}</span>
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+            {{> textInput name="name" class="single-field" label=itemType value=item.name placeholder="Talent" }}
             {{#if showTag}}
-            <h2 class="tag"><input name="system.tag" type="text" value="{{system.tag}}" placeholder="Tag" /></h3>
+            {{> textInput name="system.tag" class="single-field" label="Tag" value=system.tag placeholder="Tag" }}
             {{/if}}
         </div>
     </div>

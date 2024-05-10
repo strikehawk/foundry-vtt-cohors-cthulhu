@@ -1,27 +1,22 @@
+import { TalentRequirementConfig } from "../../applications/talents/talent-requirement-config.mjs";
 import { SYSTEM_ID, SYSTEM_PATH } from "../../constants.mjs";
-import { Talent } from "../../data-models/item/talent.mjs";
+import { Talent } from "../../data-models/item/talents/talent.mjs";
 import {
   KeywordListAdapter,
   KeywordListHandler,
 } from "../components/keyword-list.mjs";
-import { SlideToggleElement } from "../components/slide-toggle.mjs";
-import { SHEET_MODES } from "../sheet-helpers.mjs";
+import { BaseItemSheet } from "./base-item-sheet.mjs";
 
-export class TalentSheet extends ItemSheet<Talent, DocumentSheetOptions> {
+export class TalentSheet extends BaseItemSheet<Talent, DocumentSheetOptions> {
   private _keywordsAdapter: KeywordListAdapter | undefined;
 
   public static override get defaultOptions(): any {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: [SYSTEM_ID, "sheet", "item", "talent"],
-      width: 520,
+      width: 580,
       height: 520,
     });
   }
-
-  /**
-   * The mode the sheet is currently in.
-   */
-  protected _mode: SHEET_MODES = SHEET_MODES.PLAY;
 
   public override get template(): string {
     const path = `${SYSTEM_PATH}/templates/item`;
@@ -57,6 +52,7 @@ export class TalentSheet extends ItemSheet<Talent, DocumentSheetOptions> {
         async: true,
       }),
       validation: item.system.getValidationErrors(),
+      addRequirement: () => this._addRequirement(),
     });
 
     return context;
@@ -68,35 +64,33 @@ export class TalentSheet extends ItemSheet<Talent, DocumentSheetOptions> {
     if (this._keywordsAdapter) {
       KeywordListHandler.register(html, this._keywordsAdapter);
     }
-  }
 
-  protected override async _renderOuter(
-    options: RenderOptions
-  ): Promise<JQuery<HTMLElement>> {
-    const html = await super._renderOuter(options);
-    const header = html[0].querySelector(".window-header");
+    html.on(
+      "click",
+      ".add-requirement",
+      undefined,
+      async (ev: JQuery.Event) => {
+        this._addRequirement();
+      }
+    );
 
-    if (!header) {
-      return html;
-    }
+    html.on(
+      "click",
+      ".edit-requirement",
+      undefined,
+      async (ev: JQuery.Event) => {
+        this._editRequirement();
+      }
+    );
 
-    // Add edit <-> play slide toggle.
-    if (this.isEditable) {
-      const toggle = document.createElement(
-        "slide-toggle"
-      ) as SlideToggleElement;
-      toggle.checked = this._mode === SHEET_MODES.EDIT;
-      // toggle.classList.add("mode-slider");
-      // toggle.dataset.tooltip = "DND5E.SheetModeEdit";
-      // toggle.setAttribute(
-      //   "aria-label",
-      //   game.i18n.localize("DND5E.SheetModeEdit")
-      // );
-      toggle.addEventListener("change", this._onChangeSheetMode.bind(this));
-      header.insertAdjacentElement("afterbegin", toggle);
-    }
-
-    return html;
+    html.on(
+      "click",
+      ".delete-requirement",
+      undefined,
+      async (ev: JQuery.Event) => {
+        this._deleteRequirement();
+      }
+    );
   }
 
   protected override async _updateObject(
@@ -108,24 +102,17 @@ export class TalentSheet extends ItemSheet<Talent, DocumentSheetOptions> {
     this.render();
   }
 
-  /**
-   * Handle the user toggling the sheet mode.
-   * @param event  The triggering event.
-   */
-  protected async _onChangeSheetMode(event: Event): Promise<void> {
-    const toggle = event.currentTarget as SlideToggleElement;
+  private _addRequirement(): void {
+    console.log("Add requirement");
+    const app = new TalentRequirementConfig();
+    app.render(true);
+  }
 
-    if (!toggle) {
-      return;
-    }
+  private _editRequirement(): void {
+    console.log("Edit requirement");
+  }
 
-    // const label = game.i18n.localize(
-    //   `DND5E.SheetMode${toggle.checked ? "Play" : "Edit"}`
-    // );
-    // toggle.dataset.tooltip = label;
-    // toggle.setAttribute("aria-label", label);
-    this._mode = toggle.checked ? SHEET_MODES.EDIT : SHEET_MODES.PLAY;
-    await this.submit();
-    this.render();
+  private _deleteRequirement(): void {
+    console.log("Remove requirement");
   }
 }

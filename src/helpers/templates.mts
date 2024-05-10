@@ -6,6 +6,9 @@ import { SYSTEM_PATH } from "../constants.mjs";
  */
 export const preloadHandlebarsTemplates = async function (): Promise<void> {
   await loadTemplates([
+    // Applications
+    `${SYSTEM_PATH}/templates/applications/talents/talent-requirement.hbs`,
+
     // Actor sheets
     `${SYSTEM_PATH}/templates/actor/actor-character-sheet.hbs`,
 
@@ -17,6 +20,7 @@ export const preloadHandlebarsTemplates = async function (): Promise<void> {
   // load named partials
   await loadTemplates({
     keywordList: `${SYSTEM_PATH}/templates/components/keyword-list.hbs`,
+    textInput: `${SYSTEM_PATH}/templates/components/text-input.hbs`,
 
     characterHeader: `${SYSTEM_PATH}/templates/actor/parts/actor-character-header.hbs`,
     characterAttributes: `${SYSTEM_PATH}/templates/actor/parts/actor-character-attributes.hbs`,

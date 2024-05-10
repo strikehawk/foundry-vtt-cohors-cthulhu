@@ -22,6 +22,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    z-index: -1;
   }
 
   &:nth-of-type(4n)::before {
@@ -63,10 +65,9 @@
 }
 
 .cohors-cthulhu {
-  .window-content {
+  &.sheet {
     background-image: url("../assets/ui/bg-paper.webp");
     background-size: auto;
-    position: relative;
     z-index: 0;
 
     &::before {
@@ -83,6 +84,14 @@
       bottom: 0;
       right: 0;
       z-index: -1;
+    }
+
+    .window-header {
+      background: url("../../../ui/denim075.png") repeat;
+    }
+
+    .window-content {
+      background: unset;
     }
   }
 
@@ -129,7 +138,8 @@
     margin-top: 10px;
 
     &.single-field {
-      height: 40px;
+      height: 44px;
+      min-height: 44px;
     }
 
     .content {
@@ -184,6 +194,11 @@
     .content {
       width: 100%;
     }
+
+    input,
+    span {
+      margin-top: 4px;
+    }
   }
 }
 
@@ -217,6 +232,10 @@
   color: white;
 
   padding: 0 8px;
+
+  &.editable {
+    cursor: pointer;
+  }
 
   span {
     margin-right: 10px;

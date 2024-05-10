@@ -1,0 +1,13 @@
+<fieldset class={{class}}>
+  <legend>{{label}}</legend>
+  {{#if editable}}
+    <input
+      type="text"
+      name="{{name}}"
+      value="{{value}}"
+      placeholder="{{placeholder}}"
+    />
+  {{else}}
+    <span class="content">{{value}}</span>
+  {{/if}}
+</fieldset>

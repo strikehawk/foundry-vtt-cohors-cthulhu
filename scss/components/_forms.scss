@@ -81,9 +81,15 @@
   }
 }
 
-//* .editor,
-.editor .editor-content {
-  min-height: 200px;
+.editor {
+  .editor-content,
+  .editor-container {
+    min-height: 200px;
+  }
+
+  .editor-container {
+    margin: 8px;
+  }
 }
 
 .box {

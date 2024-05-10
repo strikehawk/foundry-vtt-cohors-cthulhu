@@ -1,6 +1,6 @@
 import { CharacterDataModel } from "../data-models/actor/character-data.mjs";
 
-import { TalentDataModel } from "../data-models/item/talent.mjs";
+import { TalentDataModel } from "../data-models/item/talents/talent.mjs";
 import { TruthDataModel } from "../data-models/item/truth.mjs";
 
 export class SystemData {

@@ -1,7 +1,8 @@
 import { Character } from "../../data-models/actor/character-data.mjs";
 import { SYSTEM_ID, SYSTEM_PATH } from "../../constants.mjs";
+import { BaseActorSheet } from "./base-actor-sheet.mjs";
 
-export class CharacterSheet extends ActorSheet<Character> {
+export class CharacterSheet extends BaseActorSheet<Character> {
   public static override get defaultOptions(): any {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: [SYSTEM_ID, "sheet", "actor"],

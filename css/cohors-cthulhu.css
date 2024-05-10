@@ -62,13 +62,12 @@
   background-color: #2b2a2c;
 }
 
-.cohors-cthulhu .window-content {
+.cohors-cthulhu.sheet {
   background-image: url("../assets/ui/bg-paper.webp");
   background-size: auto;
-  position: relative;
   z-index: 0;
 }
-.cohors-cthulhu .window-content::before {
+.cohors-cthulhu.sheet::before {
   content: "";
   -webkit-mask-image: url("../assets/ui/bg-border-02.webp");
   mask-image: url("../assets/ui/bg-border-02.webp");
@@ -84,6 +83,12 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+.cohors-cthulhu.sheet .window-header {
+  background: url("../../../ui/denim075.png") repeat;
+}
+.cohors-cthulhu.sheet .window-content {
+  background: unset;
 }
 .cohors-cthulhu .ui-button {
   height: 18px;
@@ -141,6 +146,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 .cohors-cthulhu fieldset:nth-of-type(4n)::before {
   border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
@@ -155,7 +161,8 @@
   border-image-source: url("../assets/ui/boxes/hand-drawn-box4.webp");
 }
 .cohors-cthulhu fieldset.single-field {
-  height: 40px;
+  height: 44px;
+  min-height: 44px;
 }
 .cohors-cthulhu fieldset .content {
   font-family: "DominicanSmallCaps";
@@ -202,6 +209,10 @@
 .cohors-cthulhu fieldset .content {
   width: 100%;
 }
+.cohors-cthulhu fieldset input,
+.cohors-cthulhu fieldset span {
+  margin-top: 4px;
+}
 
 .hand-drawn-borders {
   position: relative;
@@ -221,6 +232,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 .hand-drawn-borders:nth-of-type(4n)::before {
   border-image-source: url("../assets/ui/boxes/hand-drawn-box1.webp");
@@ -279,6 +291,9 @@
   mask-size: 100% 100%;
   color: white;
   padding: 0 8px;
+}
+.chip.editable {
+  cursor: pointer;
 }
 .chip span {
   margin-right: 10px;
@@ -359,10 +374,6 @@
 }
 .cc-keyword-list ul li button.ui-button {
   background-color: #2b2a2c;
-  -webkit-mask-image: url("../assets/ui/tables/table-header1.webp");
-  mask-image: url("../assets/ui/tables/table-header1.webp");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
 }
 
 /* ---------------------------------- */
@@ -1313,8 +1324,12 @@ fieldset.character-fortune legend {
 .cohors-cthulhu .description-field .tox.tox-tinymce .tox-editor-header {
   padding-top: 0;
 }
-.cohors-cthulhu .editor .editor-content {
+.cohors-cthulhu .editor .editor-content,
+.cohors-cthulhu .editor .editor-container {
   min-height: 200px;
+}
+.cohors-cthulhu .editor .editor-container {
+  margin: 8px;
 }
 .cohors-cthulhu .box {
   padding: 0 5px 5px 5px;

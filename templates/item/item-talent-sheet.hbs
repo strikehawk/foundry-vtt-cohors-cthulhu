@@ -4,9 +4,36 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
     <div class="tab description-field">
-      {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      {{editor descriptionHTML target="system.description" button=false owner=owner editable=editable engine="prosemirror" collaborate=false}}
     </div>
 
-    {{> keywordList target="system.keywords" context=system.keywords contextValidation=validation.keywords}}
+    {{> keywordList target="system.keywords" context=system.keywords contextValidation=validation.keywords editable=editable}}
+  
+  <div class="cc-keyword-list">
+  <legend class="table-header-01">
+    <span>Requirements</span>
+    {{#if editable}}
+    <button class="ui-button add-requirement" data-tooltip="Add new requirement">+</button>
+    {{/if}}
+  </legend>
+  <span class="cc-title">No requirement</span>
+  {{#if editable}}
+  <div class="chip-container">
+    <div class="chip editable">
+      <span data-tooltip="Character should have 3 ranks or more in Academia">Advanced: Academia</span>
+      <button class="ui-button edit-requirement" data-tooltip="Edit requirement">
+        <i class="fas fa-cog"></i>
+      </button>
+      <button class="ui-button delete-requirement" data-tooltip="Remove requirement">-</button>
+    </div>
+  </div>
+  {{else}}
+  <div class="chip-container">
+    <div class="chip">
+        <span data-tooltip="Character should have 3 ranks or more in Academia">Advanced: Academia</span>
+    </div>
+  </div>
+  {{/if}}
+</div>
   </section>
 </form>
