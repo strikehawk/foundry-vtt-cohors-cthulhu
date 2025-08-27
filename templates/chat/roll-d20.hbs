@@ -1,0 +1,27 @@
+<div class="cohors-chat-message" data-item-id="{{item._id}}">
+	<div class="content">
+		<h2>{{rollname}}</h2>
+		<p class="success-plaq">
+			{{localize "COHORS.TEMPLATES.Successes"}}:
+			{{successes}}
+			<span class="TN">
+				&nbsp;&nbsp;&nbsp;({{localize "COHORS.TEMPLATES.TN"}} {{successTreshold}})
+			</span>
+		</p>
+		{{#ifCond complications '>' 0}}
+			<p class="complication-plaq">
+				{{localize "COHORS.TEMPLATES.Complications"}}: {{complications}}
+			</p>
+		{{/ifCond}}
+		<div class="dices-result">
+			{{#each results as |dice|}}
+				<span
+					class="dice-icon d20{{#if reroll}} reroll{{/if}}{{#ifCond complication '==' 1}} complication{{/ifCond}}{{#ifCond success '==' 1}} success{{/ifCond}}{{#ifCond success '==' 2}} crit{{/ifCond}}"
+					data-index="{{@index}}"
+				>{{dice.result}}</span>
+			{{/each}}
+		</div>
+
+		<button class="reroll-button">{{localize "COHORS.TEMPLATES.Reroll"}}</button>
+	</div>
+</div>

@@ -1,3 +1,4 @@
+import { DiceSoNice } from "./hooks/roll-configuration.mjs";
 import { CohorsConstant } from "./hooks/system-config.mjs";
 
 export interface ConfiguredConfig
@@ -43,7 +44,9 @@ export type ConfiguredGame = Game<
   Macro,
   Scene,
   User
->;
+> & {
+  dice3d?: DiceSoNice;
+};
 
 declare global {
   const CONFIG: ConfiguredConfig;

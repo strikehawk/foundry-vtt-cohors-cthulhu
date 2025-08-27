@@ -5,10 +5,12 @@ import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { SystemData } from "./hooks/system-data.mjs";
 import { SheetsConfiguration } from "./hooks/sheets-configuration.mjs";
 import { CustomConfig } from "./hooks/system-config.mjs";
+import { CommandManager } from "./commands/command.manager.mjs";
 
 export abstract class HooksCohors {
   public static listen(): void {
     HooksCohors._init();
+    HooksCohors._ready();
     HooksCohors._renderChatMessage();
   }
 
@@ -28,6 +30,12 @@ export abstract class HooksCohors {
 
       // Preload Handlebars templates.
       await preloadHandlebarsTemplates();
+    });
+  }
+
+  private static _ready(): void {
+    Hooks.on("ready", () => {
+      CommandManager.registerCommands();
     });
   }
 

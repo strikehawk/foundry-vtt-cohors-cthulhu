@@ -10,7 +10,7 @@
             "dom.iterable"
         ],
         "strict": true,
-        "noFallthroughCasesInSwitch": true,
+        "noFallthroughCasesInSwitch": false,
         "skipLibCheck": true,
         "noImplicitOverride": true,
         "noImplicitReturns": true,

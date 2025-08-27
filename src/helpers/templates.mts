@@ -7,7 +7,11 @@ import { SYSTEM_PATH } from "../constants.mjs";
 export const preloadHandlebarsTemplates = async function (): Promise<void> {
   await loadTemplates([
     // Applications
+    `${SYSTEM_PATH}/templates/applications/skill-roll.hbs`,
     `${SYSTEM_PATH}/templates/applications/talents/talent-requirement.hbs`,
+
+    // Chat
+    `${SYSTEM_PATH}/templates/chat/roll-d20.hbs`,
 
     // Actor sheets
     `${SYSTEM_PATH}/templates/actor/actor-character-sheet.hbs`,

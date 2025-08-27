@@ -1,4 +1,12 @@
 {
+  "TYPES.Item.skill": "Skill",
+  "COHORS.TEMPLATES.Attribute": "Attribute",
+  "COHORS.TEMPLATES.Attributes": "Attributes",
+  "COHORS.TEMPLATES.Complication": "Complication",
+  "COHORS.TEMPLATES.Complications": "Complications",
   "COHORS.TEMPLATES.Description": "Description",
-  "COHORS.TEMPLATES.Attributes": "Attributes"
+  "COHORS.TEMPLATES.HasFocus": "Has appropriate focus",
+  "COHORS.TEMPLATES.Reroll": "Re-roll",
+  "COHORS.TEMPLATES.Successes": "Successes",
+  "COHORS.TEMPLATES.TN": "Target Number"
 }

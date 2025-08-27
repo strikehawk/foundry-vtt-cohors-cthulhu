@@ -5,6 +5,52 @@ import {
   ChallengeDieResult,
   DieCohorsChallenge,
 } from "../roller/die-cohors-challenge.mjs";
+import { ChatSpeakerData } from "foundry-vtt-types/common/documents/module.js";
+
+export interface DSNColorSet {
+  name: string;
+  description: string;
+  category: string;
+  foreground: string;
+  background: string;
+  outline: string;
+  texture: string;
+  material: string;
+}
+
+export interface DSNDicePreset {
+  type: string;
+  labels: string[];
+  system: string;
+  colorset: string;
+}
+
+export interface DiceSoNice {
+  addSystem(system: { id: string; name: string }, isDefault: boolean): void;
+  addColorset(colorSet: DSNColorSet): void;
+  addDicePreset(preset: DSNDicePreset): void;
+
+  /**
+   * Show the 3D Dice animation for the Roll made by the User.
+   * @param roll an instance of Roll class to show 3D dice animation.
+   * @param user the user who made the roll (game.user by default).
+   * @param synchronize if the animation needs to be shown to other players. Default: false
+   * @param whisper list of users or userId who can see the roll, set it to null if everyone can see. Default: null
+   * @param blind if the roll is blind for the current user. Default: false
+   * @param chatMessageID A chatMessage ID to reveal when the roll ends. Default: null
+   * @param speaker An object using the same data schema than ChatSpeakerData. <br/>Needed to hide NPCs roll when the GM enables this setting.
+   * @returns when resolved true if the animation was displayed, false if not.
+   */
+  showForRoll(
+    roll: Roll,
+    user?: User,
+    synchronize?: boolean,
+    whisper?: string[],
+    blind?: boolean,
+    chatMessageID?: string,
+    speaker?: ChatSpeakerData
+  ): Promise<boolean>;
+}
 
 export class RollConfiguration {
   public static initialize(): void {
@@ -38,7 +84,8 @@ export class RollConfiguration {
     /*  DICE SO NICE                                */
     /* -------------------------------------------- */
 
-    Hooks.once("diceSoNiceReady", (dice3d: any) => {
+    Hooks.once("diceSoNiceReady", (args: unknown) => {
+      const dice3d: DiceSoNice = args as DiceSoNice;
       dice3d.addSystem({ id: SYSTEM_ID, name: SYSTEM_LABEL }, true);
 
       dice3d.addColorset({
@@ -65,6 +112,9 @@ export class RollConfiguration {
         system: SYSTEM_ID,
         colorset: SYSTEM_ID,
       });
+
+      // set the instance of DiceSoNice on Game object for easier reference.
+      game.dice3d = dice3d;
     });
   }
 
